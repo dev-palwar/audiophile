@@ -3,13 +3,12 @@ import Navbar from "@/Components/Navbar";
 import zx9 from "../assets/home/desktop/image-speaker-zx9.png";
 import yx1 from "../assets/product-yx1-earphones/desktop/image-gallery-2.jpg";
 import Image from "next/image";
-import IoPort from "tailwind/dist/IoPort";
-import About from "@/Components/About";
+import ProductDetails from "@/Components/ProductDetails";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div className="hero-section h-screen text-white">
         <div className="wrapper">
           <div className="hero-product-info w-3/6 pt-44 flex flex-col gap-8">
@@ -21,7 +20,9 @@ export default function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.{" "}
             </p>
+            <Link href={'/headphones/1'}>
             <button>see product</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -36,14 +37,18 @@ export default function Home() {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.{" "}
               </p>
+              <Link href={'/speakers/5'}>
               <button className="bg-black">see product</button>
+              </Link>
             </div>
           </div>
         </div>
         <div className="zx7-speaker flex items-center">
           <div className="info p-5 flex flex-col gap-6">
             <h1 className="text-5xl font-normal">ZX7 SPEAKER</h1>
+            <Link href={'/speakers/6'}>
             <button className="button2">see product</button>
+            </Link>
           </div>
         </div>
         <div className="yx1-earphone flex gap-10 mt-10 mb-10">
@@ -52,7 +57,9 @@ export default function Home() {
           </div>
           <div className="info flex flex-col justify-center gap-6 basis-[50%] bg-[#f1f1f1] rounded w-full">
             <h1 className="text-5xl font-normal mx-10">YX1 EARPHONES</h1>
+            <Link href={'/earphones/4'}>
             <button className="button2 mx-10">see product</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
@@ -19,10 +20,18 @@ const Footer = () => {
               </p>
             </div>
             <div className="navigation uppercase flex gap-5">
+              <Link href='/'>
               <h3 className="link">home</h3>
+              </Link>
+              <Link href="/speakers">
               <h3 className="link">Speakers</h3>
+              </Link>
+              <Link href="/headphones">
               <h3 className="link">Headphones</h3>
+              </Link>
+              <Link href="/earphones">
               <h3 className="link">Earphones</h3>
+              </Link>
             </div>
           </div>
         <div className="copyright flex justify-between">
