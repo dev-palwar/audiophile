@@ -1,18 +1,40 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import speakersData from "../data/speakersData";
-const ProductDetails = ({ params }) => {
-  const data = speakersData[params.productid - params.productid];
-  const [quantity, setQuantity] = useState(1);
+import { addItem, removeItem } from "@/Redux/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-  const minus = ()=>{
-    if(quantity>0){
-      setQuantity(quantity-1);
+const ProductDetails = ({ params }) => {
+  const data = speakersData[params.productid - 1];
+  const [quantity, setQuantity] = useState(1);
+  const cartData = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const minus = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
     }
-  }
-  const plus = ()=>{
-    setQuantity(quantity+1);
-  }
+  };
+  const plus = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handler = (product) => {
+    if (cartData.some((value) => value.id === product.id)) {
+      dispatch(removeItem(product.id));
+    } else {
+      dispatch(addItem(product));
+    }
+  };
+
+  useEffect(() => {
+    if (cartData.length > 0) {
+      const cartItem = cartData.find((value) => value.id === data.id);
+      if (cartItem) {
+        setQuantity(cartItem.quantity);
+      }
+    }
+  }, [cartData, data.id, quantity, data]);
 
   return (
     <>
@@ -29,13 +51,33 @@ const ProductDetails = ({ params }) => {
               <h3 className="font-bold">$ 2,999</h3>
               <div className="buttons flex gap-5">
                 <div className="counter flex w-[20%]">
-                  <button className="bg-[#f1f1f1] text-black" onClick={minus} >-</button>
+                  <button className="bg-[#f1f1f1] text-black" onClick={minus}>
+                    -
+                  </button>
                   <h3 className="bg-[#f1f1f1] w-[50%] flex items-center justify-center">
                     {quantity}
                   </h3>
-                  <button className="bg-[#f1f1f1] text-black" onClick={plus}>+</button>
+                  <button className="bg-[#f1f1f1] text-black" onClick={plus}>
+                    +
+                  </button>
                 </div>
-                <button>Add to cart</button>
+                <button
+                  onClick={() => {
+                    handler({
+                      id: data.id,
+                      name: data.name,
+                      image: data.image,
+                      quantity: quantity,
+                      price: data.price * quantity,
+                    });
+                  }}
+                >
+                  {cartData.some((value) => value.id === data.id) === true ? (
+                    <>Added to cart</>
+                  ) : (
+                    <>Add to cart</>
+                  )}
+                </button>
               </div>
             </div>
           </div>

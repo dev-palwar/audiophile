@@ -1,9 +1,7 @@
 import Category from "@/Components/Category";
-import Navbar from "@/Components/Navbar";
 import zx9 from "../assets/home/desktop/image-speaker-zx9.png";
 import yx1 from "../assets/product-yx1-earphones/desktop/image-gallery-2.jpg";
 import Image from "next/image";
-import ProductDetails from "@/Components/ProductDetails";
 import Link from "next/link";
 
 export default function Home() {
@@ -20,7 +18,7 @@ export default function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.{" "}
             </p>
-            <Link href={'/headphones/1'}>
+            <Link href={'/headphones/3'}>
             <button>see product</button>
             </Link>
           </div>
@@ -37,7 +35,7 @@ export default function Home() {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.{" "}
               </p>
-              <Link href={'/speakers/5'}>
+              <Link href={'/speakers/1'}>
               <button className="bg-black">see product</button>
               </Link>
             </div>
@@ -46,7 +44,7 @@ export default function Home() {
         <div className="zx7-speaker flex items-center">
           <div className="info p-5 flex flex-col gap-6">
             <h1 className="text-5xl font-normal">ZX7 SPEAKER</h1>
-            <Link href={'/speakers/6'}>
+            <Link href={'/speakers/2'}>
             <button className="button2">see product</button>
             </Link>
           </div>

@@ -1,6 +1,6 @@
 const speakersData = [
     {
-        id: 5,
+        id: 1,
         name: "ZX9 Speaker",
         image: "https://audiophilewebsite.netlify.app/img/image-category-page-preview.b8438b07.jpg",
         desc: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -10,7 +10,7 @@ const speakersData = [
         images: ['https://audiophilewebsite.netlify.app/img/image-gallery-1.5ba9a491.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-2.aa9c39d1.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-3.14ea52e0.jpg']
     },
     {
-        id: 6,
+        id: 2,
         name: "ZX7 Speaker",
         image: "https://audiophilewebsite.netlify.app/img/image-category-page-preview.28baf219.jpg",
         desc: "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",

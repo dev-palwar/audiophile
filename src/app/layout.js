@@ -2,8 +2,8 @@ import Navbar from "@/Components/Navbar";
 import "./globals.css";
 import { Manrope } from "next/font/google";
 import Footer from "@/Components/Footer";
-import Category from "@/Components/Category";
 import About from "@/Components/About";
+import Prvider from "@/Redux/Provider";
 
 const menrope = Manrope({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -16,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={menrope.className}>
-        <Navbar/>
-        <div>{children}</div>
-        <About />
-        <Footer />
+        <Prvider>
+          <Navbar />
+          <div>{children}</div>
+          <About />
+          <Footer />
+        </Prvider>
       </body>
     </html>
   );

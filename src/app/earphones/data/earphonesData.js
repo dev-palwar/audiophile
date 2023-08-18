@@ -1,6 +1,6 @@
 const earphonesData = [
     {
-        id: 4,
+        id: 6,
         name: "YX1 Wireless Earphones",
         image: "https://audiophilewebsite.netlify.app/img/image-product.2aeeadec.jpg",
         desc: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",

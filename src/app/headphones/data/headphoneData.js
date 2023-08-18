@@ -1,6 +1,6 @@
 const headphoneData = [
     {
-        id: 5,
+        id: 3,
         name: "XX99 Mark II Headphones",
         image: "https://audiophilewebsite.netlify.app/img/image-category-page-preview.b19275ff.jpg",
         desc: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -10,7 +10,7 @@ const headphoneData = [
         images: ['https://audiophilewebsite.netlify.app/img/image-gallery-1.01d527aa.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-2.2fa8356c.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-3.efe9dabb.jpg']
     },
     {
-        id: 6,
+        id: 4,
         name: "XX59 Headphones",
         image: "https://audiophilewebsite.netlify.app/img/image-category-page-preview.8ce57b69.jpg",
         desc: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -20,7 +20,7 @@ const headphoneData = [
         images: ['https://audiophilewebsite.netlify.app/img/image-gallery-1.fdf120c0.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-2.be9e7ebd.jpg', 'https://audiophilewebsite.netlify.app/img/image-gallery-3.61d4cad3.jpg']
     },
     {
-        id: 3,
+        id: 5,
         name: "XX99 Mark I Headphones",
         image: "https://audiophilewebsite.netlify.app/img/image-category-page-preview.4761c4dc.jpg",
         desc: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
