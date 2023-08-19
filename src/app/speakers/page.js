@@ -1,6 +1,6 @@
 import React from "react";
 import Category from "@/Components/Category";
-import { ProductCardSidha, ProductCardUlta } from "@/Components/ProductCard";
+import { ProductCard } from "@/Components/ProductCard";
 import speakersData from "./data/speakersData";
 
 const page = () => {
@@ -12,7 +12,7 @@ const page = () => {
       <div className="wrapper">
         {speakersData.map((value)=>{
           return (
-            <ProductCardSidha name={value.name} image={value.image} desc={value.desc} path={`speakers/${value.id}`}/>
+            <ProductCard name={value.name} image={value.image} desc={value.desc} path={`speakers/${value.id}`}/>
           )
         })}
         <Category />

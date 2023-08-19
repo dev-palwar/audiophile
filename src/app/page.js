@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <Category />
-      <div className="featured-products wrapper">
+      <div className="featured-products wrapper p-4">
         <div className="zx9-speaker flex px-8 overflow-hidden mb-12 pt-[5rem]">
           <Image src={zx9} className="mb-[-1rem]" />
           <div className="flex flex-col justify-center basis-[130%]">

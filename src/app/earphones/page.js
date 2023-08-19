@@ -1,5 +1,5 @@
 import Category from "@/Components/Category";
-import { ProductCardSidha } from "@/Components/ProductCard";
+import { ProductCard } from "@/Components/ProductCard";
 import React from "react";
 import earphonesData from "./data/earphonesData";
 
@@ -12,7 +12,7 @@ const page = () => {
       <div className="wrapper">
         {earphonesData.map((value) => {
           return (
-            <ProductCardSidha
+            <ProductCard
               name={value.name}
               image={value.image}
               desc={value.desc}

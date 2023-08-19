@@ -1,5 +1,6 @@
 import Navbar from "@/Components/Navbar";
 import "./globals.css";
+import "../Styles/Media.css"
 import { Manrope } from "next/font/google";
 import Footer from "@/Components/Footer";
 import About from "@/Components/About";

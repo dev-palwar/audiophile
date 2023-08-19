@@ -1,5 +1,5 @@
 import Category from "@/Components/Category";
-import { ProductCardSidha, ProductCardUlta } from "@/Components/ProductCard";
+import { ProductCard } from "@/Components/ProductCard";
 import headphoneData from "@/app/headphones/data/headphoneData";
 import React from "react";
 
@@ -10,10 +10,10 @@ const page = () => {
         <h1 className="uppercase text-center pt-[20vh]">Headphones</h1>
       </div>
       <div className="wrapper">
-        <div className="headphone-items flex flex-col gap-40">
+        <div className="headphone-items flex flex-col">
           {headphoneData.map((value)=>{
             return(
-              <ProductCardSidha name={value.name} image={value.image} desc={value.desc} path={`headphones/${value.id}`}/>
+              <ProductCard name={value.name} image={value.image} desc={value.desc} path={`headphones/${value.id}`}/>
             )
           })}
         </div>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector } from "react-redux";
@@ -15,7 +16,7 @@ export default function Cart() {
       total += value.price;
       setTotalBill(total);
     });
-  });
+  },[cartData]);
 
   return (
     <>
@@ -28,7 +29,7 @@ export default function Cart() {
       </button>
       {showModal ? (
         <>
-          <div className="text-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="bg-[#000c] text-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className=" rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -64,12 +65,16 @@ export default function Cart() {
                         <p className="font-bold">${totalBill}</p>
                       </div>
                       <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <Link href={"/checkout"} className="w-full">
                         <button className="w-full">Checkout</button>
+                        </Link>
                       </div>
                     </>
                   ) : (
                     <>
-                      <h2>No items yet</h2>
+                      <div className="h-[30vh]">
+                        <img src="https://elements-cover-images-0.imgix.net/41ce1856-ce64-47eb-9cc9-d50c75ba936b?auto=compress%2Cformat&fit=max&w=900&s=501aef4930c224609ff884797e50331d" alt="" className="h-[100%]" />
+                      </div>
                     </>
                   )}
                 </div>
@@ -84,7 +89,7 @@ export default function Cart() {
 
 const Card = ({ name, image, price }) => {
   return (
-    <div className="flex justify-between items-center gap-10 mt-5">
+    <div className="flex items-center gap-10 mt-5">
       <div className="h-[15vh]">
         <img className="h-[100%]" src={image} alt="" />
       </div>

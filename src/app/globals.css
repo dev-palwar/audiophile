@@ -5,6 +5,7 @@
 .wrapper {
   max-width: 1200px;
   margin: auto;
+  padding: 10px;
 }
 
 .hero-section {
@@ -29,6 +30,7 @@ button {
   width: fit-content;
 }
 
+
 button:hover {
   background-color: #622907;
 }
@@ -41,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   line-height: 2.459rem;
   letter-spacing: .129rem;
@@ -75,21 +77,35 @@ h2 {
   background-position-y: top;
   border-radius: 10px;
 }
-.button2{
+
+.button2 {
   background: transparent;
   border: 1px solid black;
   color: black;
 }
-.button2:hover{
+
+.button2:hover {
   background-color: black;
   color: whitesmoke;
 }
+
 .link {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 700;
 }
-.link:hover{
+
+.link:hover {
   color: red;
+}
+
+input {
+  margin-top: 10px;
+  outline: none;
+  width: 22rem;
+  height: 3.6rem;
+  padding-left: 1.4rem;
+  border-radius: 0.8rem;
+  border: 1px solid;
 }
