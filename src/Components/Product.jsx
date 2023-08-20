@@ -19,29 +19,30 @@ const Product = ({ data, type }) => {
 
   const handler = (product) => {
     let updatedCartData = [];
-  
+
     // Retrieves existing cart data from localStorage
-    const cartDataString = window.localStorage.getItem('cart_data');
+    const cartDataString = window.localStorage.getItem("cart_data");
     if (cartDataString) {
       updatedCartData = JSON.parse(cartDataString);
     }
-  
+
     if (updatedCartData.some((value) => value.id === product.id)) {
       dispatch(removeItem(product.id));
-  
+
       // Removes the product from the updated array
-      updatedCartData = updatedCartData.filter((item) => item.id !== product.id);
+      updatedCartData = updatedCartData.filter(
+        (item) => item.id !== product.id
+      );
     } else {
       dispatch(addItem(product));
-  
+
       // Adds the product to the updated array
       updatedCartData.push(product);
     }
-  
+
     // Saves the updated array back to localStorage
-    window.localStorage.setItem('cart_data', JSON.stringify(updatedCartData));
+    window.localStorage.setItem("cart_data", JSON.stringify(updatedCartData));
   };
-  
 
   useEffect(() => {
     if (cartData.length > 0) {
@@ -107,9 +108,9 @@ const Product = ({ data, type }) => {
           <div className="in-the-box flex flex-col gap-[1rem]">
             <h2>In the box</h2>
             <ul className="list-disc text-gray-600 p-3">
-              {data.inTheBox.map((value) => {
-                return <li>{value}</li>;
-              })}
+              {data.inTheBox.map((value, index) => (
+                <li key={index}>{value}</li>
+              ))}
             </ul>
           </div>
         </div>

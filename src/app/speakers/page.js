@@ -13,6 +13,7 @@ const page = () => {
         {speakersData.map((value) => {
           return (
             <ProductCard
+              key={value.id}
               name={value.name}
               image={value.image}
               desc={value.desc}

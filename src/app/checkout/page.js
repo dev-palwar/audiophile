@@ -91,6 +91,7 @@ const page = () => {
               {cartData.map((value) => {
                 return (
                   <CartItems
+                  key={value.id}
                     name={value.name}
                     image={value.image}
                     price={value.price}

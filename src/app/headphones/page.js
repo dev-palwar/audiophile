@@ -13,7 +13,7 @@ const page = () => {
         <div>
           {headphoneData.map((value)=>{
             return(
-              <ProductCard name={value.name} image={value.image} desc={value.desc} path={`headphones/${value.id}`}/>
+              <ProductCard key={value.id} name={value.name} image={value.image} desc={value.desc} path={`headphones/${value.id}`}/>
             )
           })}
         </div>

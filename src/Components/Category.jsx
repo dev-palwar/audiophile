@@ -13,7 +13,7 @@ const Category = () => {
       <div className="wrapper">
         <div className="categories flex justify-evenly mt-[6rem] mb-[6rem] mx-[-20px]">
           <div className="card">
-            <Image src={headphoneImg} />
+            <Image alt="" src={headphoneImg} />
             <h2>Headphones</h2>
             <Link href="/headphones" className="flex items-center gap-1">
               <p className="text-gray-400">Shop</p>
@@ -21,7 +21,7 @@ const Category = () => {
             </Link>
           </div>
           <div className="card">
-            <Image src={earphoneImg} />
+            <Image alt="" src={earphoneImg} />
             <h2>earphones</h2>
             <Link href="/earphones" className="flex items-center gap-1">
               <p className="text-gray-400">Shop</p>
@@ -29,7 +29,7 @@ const Category = () => {
             </Link>
           </div>
           <div className="card">
-            <Image src={speakerImg} />
+            <Image alt="" src={speakerImg} />
             <h2>speakers</h2>
             <Link href="/speakers" className="flex items-center gap-1">
               <p className="text-gray-400">Shop</p>
