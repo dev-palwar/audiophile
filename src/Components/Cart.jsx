@@ -54,6 +54,7 @@ export default function Cart() {
                       {cartData.map((value) => {
                         return (
                           <Card
+                          key={value.id}
                             id={value.id}
                             type={value.type}
                             name={value.name}

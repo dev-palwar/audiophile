@@ -1,16 +1,17 @@
-"use client";
+'use client'
 import { useDispatch } from "react-redux";
 import { addItem } from "@/Redux/CartSlice";
-
 import React, { useEffect } from "react";
 
 const ReduxStorage = () => {
   const dispatch = useDispatch();
-  const dataaa = JSON.parse(localStorage.getItem("cart_data"));
 
   useEffect(() => {
-    if (dataaa) {
-      dataaa.map((value) => {
+    const dataaaString = window.localStorage.getItem("cart_data");
+
+    if (dataaaString) {
+      const dataaa = JSON.parse(dataaaString);
+      dataaa.forEach((value) => {
         dispatch(addItem(value));
       });
     }

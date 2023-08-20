@@ -2,18 +2,16 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-const page = () => {
+const Page = () => {
   const [totalBill, setTotalBill] = useState(0);
   const cartData = useSelector((state) => state.cart);
 
-  const handler = () => {};
-
-  var total = 0;
   useEffect(() => {
+    let total = 0;
     cartData.forEach((value) => {
       total += value.price;
-      setTotalBill(total);
     });
+    setTotalBill(total);
   }, [cartData]);
 
   return (
@@ -22,7 +20,6 @@ const page = () => {
       {cartData.length > 0 ? (
         <form
           action="/"
-          onSubmit={handler}
           className="checkout-page flex justify-evenly p-[5rem]"
         >
           <div className="form">
@@ -69,21 +66,6 @@ const page = () => {
                 <input required type="text" />
               </div>
             </div>
-            {/* <div className="payment-details">
-            <div className="flex justify-between">
-              <div>
-                <h3>Payment method</h3>
-              </div>
-              <div>
-                <input type="text" />
-                <input type="text" />
-              </div>
-            </div>
-            <div className="flex">
-              <input type="text" />
-              <input type="text" />
-            </div>
-          </div> */}
           </div>
           <div className="h-fit bg-[#fafafa] p-[20px]">
             <h4 className="uppercase mb-5 font-bold text-2xl">Summary</h4>
@@ -151,4 +133,4 @@ const CartItems = ({ name, image, price }) => {
   );
 };
 
-export default page;
+export default Page;
