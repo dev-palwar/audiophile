@@ -25,7 +25,7 @@ const page = () => {
           onSubmit={handler}
           className="checkout-page flex justify-evenly p-[5rem]"
         >
-          <div className="form p-[1rem] ">
+          <div className="form">
             <h2 className="uppercase mb-[3rem]">checkout</h2>
             <div className="billing-details flex  flex-col gap-5">
               <h3 className="text-orange-400 text-xl uppercase">
@@ -124,7 +124,7 @@ const page = () => {
       ) : (
         <>
           <div className="h-[5vh]"></div>
-          <div className="w-[50%] m-auto">
+          <div className="no-items-image w-[50%] m-auto">
             <img
               src="https://elements-cover-images-0.imgix.net/41ce1856-ce64-47eb-9cc9-d50c75ba936b?auto=compress%2Cformat&fit=max&w=900&s=501aef4930c224609ff884797e50331d"
               alt=""
@@ -139,7 +139,7 @@ const page = () => {
 const CartItems = ({ name, image, price }) => {
   return (
     <div className="flex justify-evenly items-center gap-10 mt-5">
-      <div className="h-[15vh]">
+      <div className="h-[15vh] max-sm:h-[10vh]">
         <img className="h-[100%] object-cover" src={image} alt="" />
       </div>
       <div className="flex flex-col">

@@ -11,7 +11,7 @@ const Category = () => {
   return (
     <>
       <div className="wrapper">
-        <div className="categories flex justify-evenly mt-[6rem] mb-[6rem]">
+        <div className="categories flex justify-evenly mt-[6rem] mb-[6rem] mx-[-20px]">
           <div className="card">
             <Image src={headphoneImg} />
             <h2>Headphones</h2>

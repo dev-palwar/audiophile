@@ -10,7 +10,7 @@ const page = () => {
         <h1 className="uppercase text-center pt-[20vh]">Headphones</h1>
       </div>
       <div className="wrapper">
-        <div className="headphone-items flex flex-col">
+        <div>
           {headphoneData.map((value)=>{
             return(
               <ProductCard name={value.name} image={value.image} desc={value.desc} path={`headphones/${value.id}`}/>

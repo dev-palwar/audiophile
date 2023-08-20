@@ -10,10 +10,15 @@ const page = () => {
         <h1 className="uppercase text-center pt-[20vh]">Speakers</h1>
       </div>
       <div className="wrapper">
-        {speakersData.map((value)=>{
+        {speakersData.map((value) => {
           return (
-            <ProductCard name={value.name} image={value.image} desc={value.desc} path={`speakers/${value.id}`}/>
-          )
+            <ProductCard
+              name={value.name}
+              image={value.image}
+              desc={value.desc}
+              path={`speakers/${value.id}`}
+            />
+          );
         })}
         <Category />
       </div>

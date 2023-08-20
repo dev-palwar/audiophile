@@ -9,7 +9,7 @@ const ProductCard = ({ name, image, desc, path }) => {
           <img src={image} alt={name} />
         </div>
         <div className="info basis-[60%] flex items-center">
-          <div className="hero-product-info p44t- flex flex-col gap-8">
+          <div className="hero-product-info flex flex-col gap-8">
             <h1>{name}</h1>
             <p className="text-gray-400 w-[27rem]">{desc}</p> 
             <Link href={`/${path}`}>

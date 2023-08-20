@@ -7,7 +7,7 @@ const ProductDetails = ({ params }) => {
 
   return (
     <>
-      <Product data={data} />
+      <Product data={data} type='earphones'/>
     </>
   );
 };

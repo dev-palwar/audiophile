@@ -16,7 +16,7 @@ export default function Cart() {
       total += value.price;
       setTotalBill(total);
     });
-  },[cartData]);
+  }, [cartData]);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function Cart() {
       </button>
       {showModal ? (
         <>
-          <div className="bg-[#000c] text-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="bg-[#000c] text-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none p-10">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className=" rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -54,6 +54,8 @@ export default function Cart() {
                       {cartData.map((value) => {
                         return (
                           <Card
+                            id={value.id}
+                            type={value.type}
                             name={value.name}
                             image={value.image}
                             price={value.price}
@@ -66,14 +68,18 @@ export default function Cart() {
                       </div>
                       <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                         <Link href={"/checkout"} className="w-full">
-                        <button className="w-full">Checkout</button>
+                          <button className="w-full">Checkout</button>
                         </Link>
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="h-[30vh]">
-                        <img src="https://elements-cover-images-0.imgix.net/41ce1856-ce64-47eb-9cc9-d50c75ba936b?auto=compress%2Cformat&fit=max&w=900&s=501aef4930c224609ff884797e50331d" alt="" className="h-[100%]" />
+                        <img
+                          src="https://elements-cover-images-0.imgix.net/41ce1856-ce64-47eb-9cc9-d50c75ba936b?auto=compress%2Cformat&fit=max&w=900&s=501aef4930c224609ff884797e50331d"
+                          alt=""
+                          className="h-[100%]"
+                        />
                       </div>
                     </>
                   )}
@@ -87,11 +93,13 @@ export default function Cart() {
   );
 }
 
-const Card = ({ name, image, price }) => {
+const Card = ({ name, image, price, type, id }) => {
   return (
     <div className="flex items-center gap-10 mt-5">
       <div className="h-[15vh]">
-        <img className="h-[100%]" src={image} alt="" />
+        <Link href={`/${type}/${id}`}>
+          <img className="h-[100%] object-cover" src={image} alt="" />
+        </Link>
       </div>
       <div className="flex flex-col">
         <h4 className="font-bold">{name}</h4>

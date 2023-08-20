@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <div className="wrapper">
-        <div className="about flex gap-[10%] mt-[10%] mb-[10%]">
+        <div className="about flex gap-[10%] mb-[10%]">
           <div className="info basis-[50%] flex flex-col gap-10 justify-center">
             <h1 className="uppercase">Bringing you the <span className="text-orange-400">best</span> audio gear </h1>
             <p className="opacity-[0.7]">
