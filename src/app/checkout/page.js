@@ -1,8 +1,11 @@
-"use client";
+'use client'
+
+import { Card } from "@/Components/Cart";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+// import CartItems from "";
 
-const Page = () => {
+const CheckoutPage = () => {
   const [totalBill, setTotalBill] = useState(0);
   const cartData = useSelector((state) => state.cart);
 
@@ -18,29 +21,26 @@ const Page = () => {
     <>
       <div className="h-[5vh]"></div>
       {cartData.length > 0 ? (
-        <form
-          action="/"
-          className="checkout-page flex justify-evenly p-[5rem]"
-        >
+        <form action="/" className="checkout-page flex justify-evenly p-[5rem]">
           <div className="form">
             <h2 className="uppercase mb-[3rem]">checkout</h2>
-            <div className="billing-details flex  flex-col gap-5">
+            <div className="billing-details flex flex-col gap-5">
               <h3 className="text-orange-400 text-xl uppercase">
                 Billing details
               </h3>
               <div className="flex gap-5">
                 <div>
                   <h3>Name</h3>
-                  <input required type="text" id="" />
+                  <input required type="text" id="name" />
                 </div>
                 <div>
                   <h3>Phone number</h3>
-                  <input required type="text" id="" />
+                  <input required type="text" id="phone" />
                 </div>
               </div>
               <div className="mb-[20px]">
                 <h3>Email</h3>
-                <input required type="email" id="" />
+                <input required type="email" id="email" />
               </div>
             </div>
             <div className="shipping-info flex flex-col gap-5">
@@ -49,21 +49,21 @@ const Page = () => {
               </h3>
               <div>
                 <h3>Your address</h3>
-                <input required type="text" className="w-full" />
+                <input required type="text" id="address" className="w-full" />
               </div>
               <div className="flex gap-5">
                 <div>
                   <h3>ZIP Code</h3>
-                  <input required type="text" />
+                  <input required type="text" id="zipCode" />
                 </div>
                 <div>
                   <h3>City</h3>
-                  <input required type="text" />
+                  <input required type="text" id="city" />
                 </div>
               </div>
               <div>
                 <h3>Country</h3>
-                <input required type="text" />
+                <input required type="text" id="country" />
               </div>
             </div>
           </div>
@@ -72,8 +72,8 @@ const Page = () => {
             <div className="overflow-auto w-[17rem]">
               {cartData.map((value) => {
                 return (
-                  <CartItems
-                  key={value.id}
+                  <Card
+                    key={value.id}
                     name={value.name}
                     image={value.image}
                     price={value.price}
@@ -92,7 +92,7 @@ const Page = () => {
               </div>
               <div className="flex justify-between">
                 <h3>GRAND TOTAL: </h3>
-                <h3 className="font-bold text-orange-400F">
+                <h3 className="font-bold text-orange-400">
                   ${totalBill + 50}
                 </h3>
               </div>
@@ -119,18 +119,4 @@ const Page = () => {
   );
 };
 
-const CartItems = ({ name, image, price }) => {
-  return (
-    <div className="flex justify-evenly items-center gap-10 mt-5">
-      <div className="h-[15vh] max-sm:h-[10vh]">
-        <img className="h-[100%] object-cover" src={image} alt="" />
-      </div>
-      <div className="flex flex-col">
-        <h4 className="font-bold">{name}</h4>
-        <p>$ {price}</p>
-      </div>
-    </div>
-  );
-};
-
-export default Page;
+export default CheckoutPage;

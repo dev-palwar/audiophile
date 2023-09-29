@@ -3,7 +3,7 @@ import Category from "@/Components/Category";
 import { ProductCard } from "@/Components/ProductCard";
 import speakersData from "./data/speakersData";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className="headphones h-[40vh] bg-[#191919] text-white mb-20">
@@ -27,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

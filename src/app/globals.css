@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   line-height: 2.459rem;
   letter-spacing: .129rem;
@@ -56,7 +56,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 52vh;
+  width: 40vh;
   text-transform: uppercase;
   background: #f3f3f3;
   padding-bottom: 23px;

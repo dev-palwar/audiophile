@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useEffect, useState } from "react";
 import { addItem, removeItem } from "@/Redux/CartSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +13,7 @@ const Product = ({ data, type }) => {
       setQuantity(quantity - 1);
     }
   };
+
   const plus = () => {
     setQuantity(quantity + 1);
   };
@@ -54,7 +55,8 @@ const Product = ({ data, type }) => {
   }, [cartData, data.id, quantity, data]);
 
   return (
-    <>
+    <div className="product">
+      <>
       <div className="h-[10vh]"></div>
       <div className="wrapper">
         <div className="item-card flex gap-[10%]">
@@ -125,6 +127,7 @@ const Product = ({ data, type }) => {
         </div>
       </div>
     </>
+    </div>
   );
 };
 
