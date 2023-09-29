@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="description flex flex-col gap-[2rem] basis-[50%]">
             <h2 className="text-[35px]">audiophile</h2>
             <p className="text-gray-400">
-              Audiophile is an all-in-one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
+              Audiophile is an all-in-one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we are open 7 days a week.
             </p>
           </div>
           <div className="navigation uppercase flex gap-5">
